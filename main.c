@@ -1,3 +1,4 @@
+// main.c
 // Arthur Knapp
 // AK146316
 
@@ -13,6 +14,10 @@
 
 int main(int argc, char * argv[])
 {
+    FILE *inFile;
+    FILE *outFile;
+    // Input and output file pointers
+    
     if (argc != THIRD && argc != FOUR)
     // Check to see if the user entered the wrong number
     // of arguments. If they did, print an error message and
@@ -23,7 +28,7 @@ int main(int argc, char * argv[])
     }
     
     else if (strcmp(argv[FIRST], "-t") == 0 || strcmp(argv[FIRST], "-b") == 0)
-    // If the argument is either "-t" or "-b"
+    // If the flag is either "-t" or "-b"
     {
         if (argc != FOUR)
         // Check to see if the user entered the correct number
@@ -34,6 +39,45 @@ int main(int argc, char * argv[])
             exit(1);
         }
         
+        if (strcmp(argv[FIRST], "-t") == 0)
+        // If the flag is "-t".
+        // This means that the input file is a text file and
+        // it is going to be converted to a binary file.
+        {
+            if ((inFile = fopen(argv[SECOND], "r")) == NULL)
+            // Check if input file opens. If not, print error
+            // message and close program.
+            {
+                
+            }
+            
+            if ((outFile = fopen(argv[THIRD], "w")) == NULL)
+            // Check if output file opens. If not, print error
+            // message and close program.
+            {
+                
+            }
+        }
+        
+        else
+        // If the flag is "-b".
+        // This means that the input file is a binary file and
+        // it is going to be converted to a text file.
+        {
+            if ((inFile = fopen(argv[SECOND], "r")) == NULL)
+            // Check if input file opens. If not, print error
+            // message and close program.
+            {
+                
+            }
+            
+            if ((outFile = fopen(argv[THIRD], "w")) == NULL)
+            // Check if output file opens. If not, print error
+            // message and close program.
+            {
+                
+            }
+        }
         // proceed with program
     }
     
@@ -47,6 +91,13 @@ int main(int argc, char * argv[])
         {
             fprintf(stderr, "Error: nvalid Number Of Arguments\n");
             exit(1);
+        }
+        
+        if ((inFile = fopen(argv[SECOND], "r")) == NULL)
+        // Check if input file opens. If not, print error
+        // message and close program.
+        {
+            
         }
         
         // proceed with program
