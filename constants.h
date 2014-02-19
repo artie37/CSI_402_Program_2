@@ -1,14 +1,15 @@
-//
-//  constants.h
-//  Program_2
-//
-//  Created by artie37 on 2/19/14.
-//  Copyright (c) 2014 artie37. All rights reserved.
-//
+// Arthur Knapp
+// AK146316
 
-#ifndef Program_2_constants_h
-#define Program_2_constants_h
+// This is a header file that defines all of the
+// constants used in this program.
 
-
-
-#endif
+#define FIRST 1
+// First spot of array of arguments
+#define SECOND 2
+// Second spot of array of arguments
+#define THIRD 3
+// Third spot of array of arguments
+// or used for 3 arguments
+#define FOUR 4
+// To check if there are 4 arguments
