@@ -1,6 +1,6 @@
 // externs.h
 // Arthur Knapp
-// AK146316
+// ID: AK146316
 
 extern FILE *inFile;
 extern FILE *outFile;
