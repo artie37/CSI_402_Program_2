@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "constants.h"
+#include "prototypes.h"
 
 int main(int argc, char * argv[])
 {
@@ -48,15 +49,19 @@ int main(int argc, char * argv[])
             // Check if input file opens. If not, print error
             // message and close program.
             {
-                
+                fprintf(stderr, "Error: Input File Did Not Open\n");
+                exit(1);
             }
             
             if ((outFile = fopen(argv[THIRD], "w")) == NULL)
             // Check if output file opens. If not, print error
             // message and close program.
             {
-                
+                fprintf(stderr, "Error: Output File Did Not Open\n");
+                exit(1);
             }
+            
+            textToBinary(inFile, outFile);
         }
         
         else
@@ -68,15 +73,18 @@ int main(int argc, char * argv[])
             // Check if input file opens. If not, print error
             // message and close program.
             {
-                
+                fprintf(stderr, "Error: Input File Did Not Open\n");
+                exit(1);
             }
             
             if ((outFile = fopen(argv[THIRD], "w")) == NULL)
             // Check if output file opens. If not, print error
             // message and close program.
             {
-                
+                fprintf(stderr, "Error: Output File Did Not Open\n");
             }
+            
+            binaryToText(inFile, outFile);
         }
         // proceed with program
     }
@@ -89,7 +97,7 @@ int main(int argc, char * argv[])
         // of arguments. If not, print an error message and
         // close program.
         {
-            fprintf(stderr, "Error: nvalid Number Of Arguments\n");
+            fprintf(stderr, "Error: Invalid Number Of Arguments\n");
             exit(1);
         }
         
@@ -97,7 +105,7 @@ int main(int argc, char * argv[])
         // Check if input file opens. If not, print error
         // message and close program.
         {
-            
+            fprintf(stderr, "Error: Input File Did Not Open\n");
         }
         
         // proceed with program
@@ -109,5 +117,8 @@ int main(int argc, char * argv[])
         fprintf(stderr, "Error: Invalid Flag\n");
         exit(1);
     }
+    
+    fclose(inFile);
+    fclose(outFile);
 }
 
