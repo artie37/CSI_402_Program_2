@@ -1,5 +1,6 @@
+// constants.h
 // Arthur Knapp
-// AK146316
+// ID: AK146316
 
 // This is a header file that defines all of the
 // constants used in this program.
