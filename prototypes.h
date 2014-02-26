@@ -1,14 +1,10 @@
-//
-//  prototypes.h
-//  Program_2
-//
-//  Created by Arthur Knapp on 2/21/14.
-//  Copyright (c) 2014 artie37. All rights reserved.
-//
+// prototypes.h
+// Arthur Knapp
+// ID: AK146316
 
-#ifndef Program_2_prototypes_h
-#define Program_2_prototypes_h
+// This is a header file that defines all of
+// the programs function prototypes
 
-
-
-#endif
+void textToBinary(FILE *, FILE *);
+void binaryToText(FILE *, FILE *);
+void binaryStats(FILE *, FILE *);
