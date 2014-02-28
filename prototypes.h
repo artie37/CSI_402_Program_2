@@ -7,4 +7,4 @@
 
 void textToBinary(FILE *, FILE *);
 void binaryToText(FILE *, FILE *);
-void binaryStats(FILE *, FILE *);
+void binaryStats(FILE *);
